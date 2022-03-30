@@ -1,0 +1,13 @@
+import random
+def random_pass():
+  first_name = input("What is your first name?: ").title()
+  last_name = input("What is your last name?: ").title()
+  pass_length = int(input("Please enter the length of password: "))
+  xter ="abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+  user_name = (first_name[0:3] + last_name[0:3]).lower()
+  gen_pass = "".join(random.sample(xter, pass_length ))
+  print("\nWelcome", first_name, last_name + ".")
+  print("\nYour suggested user name is:", user_name)
+  print("Your first time password is:", gen_pass)
+  print("\nYou can change these details subsequently.")
+random_pass()
