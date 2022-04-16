@@ -1,0 +1,16 @@
+import random
+def random_num_game():
+  user_choice = int(input("Choose a random number: "))
+  random_guess = random.randint(0, 10)
+  print("You chose", user_choice)
+  print("Computer chose", random_guess)
+  while random_guess != user_choice:
+    print("Wrong choice. Try again.")
+    user_choice = int(input("Choose a random number between 0 to 10: "))
+    random_guess = random.randrange(0, 10)
+    print("You chose", user_choice)
+    print("Computer chose", random_guess)
+    if random_guess == user_choice:
+      return "Great Guess! Correct"
+    
+random_num_game()
