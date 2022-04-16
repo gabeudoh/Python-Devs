@@ -1,0 +1,27 @@
+def student_data():
+  f_name = input("First Name: ")
+  l_name = input("Surname: ")
+  age = int(input("Age: "))
+  nationality = input("Nationality: ")
+  faculty = input("Faculty: ")
+  dept = input("Department: ")
+  semester = int(input("Semester of Study: "))
+  test_score_a = float(input("1st Continuous Assessment: "))
+  test_score_b = float(input("2nd Continuous Assessment: "))
+  exam_score = float(input("Examination Score: "))
+  total_score = float(test_score_a + test_score_b + exam_score)
+  print("Total Score: ", float(total_score))
+  if total_score <= 39:
+    print("Student's Grade: F \nStudent must rewrite the course.")
+  elif total_score <= 40 <= 44:
+    print("Student's Grade: E \nStudent has a poor grade.")
+  elif total_score <= 45 <= 49:
+    print("Student's Grade: D \nStudent has a poor grade.")
+  elif total_score <= 50 <= 59:
+    print("Student's Grade: C \nStudent has a good grade.")
+  elif total_score <= 60 <= 69:
+    print("Student's Grade: B \nStudent has a very good grade.")
+  else:
+    print("Student's Grade: A \nStudent has an excellent grade.")
+  return(student_data)
+student_data()
